@@ -1,6 +1,6 @@
-/*CABEÇALHO*/
+/* Estilos gerais */
 * {
-    margin: 15px; /* GROSSURA DA PARTE PRETA DO CABEÇALHO*/
+    margin: 15px;
     padding: 0;
     border-radius: 5px;
     box-sizing: border-box;
@@ -8,20 +8,20 @@
 }
 
 body {
-    background-color: #230829; /* cor de fundo do site */
-    color: #fff; /*cor das fontes*/
+    background-color: #230829;
+    color: #fff;
 }
 
-header { /* cabeçalho */ 
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 100px; /* distância do nome "thially" da borda */
-    background-color: #78448a ; /*cor do cabeçalho*/
+    padding: 15px 100px;
+    background-color: #78448a;
 }
 
 h1 {
-    color: #ffffff; /* cor das letras do nome thially */
+    color: #ffffff;
 }
 
 nav {
@@ -35,7 +35,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px; /* distância dos itens do cabeçalho */
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -45,18 +45,19 @@ nav ul li a {
 }
 
 /* CONHEÇA-ME */
-.content h2 { 
-    font-size: 50px; /* tamanho da fonte "conheça-me" */
+.content h2 {
+    font-size: 50px;
     text-align: center;
     width: 100%;
 }
 
-.content h2 span { /* conheça-me */
+.content h2 span {
     color: #8A2BE2;
     font-weight: bold;
     display: block;
     margin-top: 0px;
 }
+
 .hero {
     padding: 40px;
     background-color: #230829;
@@ -64,21 +65,23 @@ nav ul li a {
 }
 
 .profile-container {
-    display: flex; /* alinhar os itens lado a lado */
-    justify-content: center; /* Centraliza o conteúdo */
-    align-items: center; /* Alinha verticalmente os itens */
-    gap: 10; /* Espaço entre a imagem e a frase */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-top: 15px;
 }
+
 .profile-pic img {
-    width: 350px; /* Definindo a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Bordas arredondadas */
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
     margin-left: 120px;
 }
-.phrase.larger-text { 
-    font-size: 20px; /* Altere o tamanho para o valor desejado */
-    max-width: 330px;  /* Mantém o texto mais compacto */
+
+.phrase.larger-text {
+    font-size: 20px;
+    max-width: 330px;
     margin-right: 300px;
     margin-top: -100px;
 }
@@ -95,12 +98,12 @@ nav ul li a {
 
 /* PÁGINA HOBBIES */
 .phrase {
-    font-size: 1.5rem;  /* Ajuste de texto para ser mais adaptável */
+    font-size: 1.5rem;
     color: #fff;
     font-weight: bold;
     max-width: 1600px;
     text-align: center;
-    margin: 0 auto;  /* Centraliza a frase */
+    margin: 0 auto;
 }
 
 .hobbies {
@@ -118,8 +121,8 @@ nav ul li a {
 
 .img-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    gap: 5px;  /* Espaço entre as colunas */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
     justify-items: center;
     margin-top: 20px;
 }
@@ -137,7 +140,6 @@ nav ul li a {
     display: block;
 }
 
-
 /* PÁGINA CONHECIMENTOS */
 .conhecimentos {
     background-color: #230829;
@@ -145,7 +147,7 @@ nav ul li a {
     padding: 0px;
     text-align: center;
     margin: 20px 0;
-    font-size: 18px; /* Tamanho geral da fonte */
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -158,19 +160,98 @@ nav ul li a {
 
 .conhecimentos h3 {
     font-size: 30px;
-    color: rgb(35, 240, 8); /* Cor para os títulos das habilidades */
+    color: rgb(35, 240, 8);
 }
 
-/*RODAPÉ*/
+/* RODAPÉ */
 .footer {
-background-color: #f3dbdb; /* Cor de fundo do rodapé */
-color: #000000; /* Cor do texto */
-text-align: center; /* Centraliza o texto */
-padding: 10px 0; /* Espaçamento interno (ajuste conforme necessário) */
-font-size: 14px; /* Tamanho da fonte */
-font-weight: bold;
-left: 0;
-bottom: 0;
-width: 100%;
+    background-color: #f3dbdb;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
-    
+
+/* Media Queries para Responsividade */
+
+/* Tela pequena (celulares) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .profile-pic img {
+        margin-left: 0;
+        width: 250px;
+    }
+
+    .phrase.larger-text {
+        font-size: 16px;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .hobbies {
+        padding: 30px;
+    }
+
+    .hobbies h2 {
+        font-size: 40px;
+    }
+
+    .img-container {
+        grid-template-columns: 1fr; /* 1 coluna em vez de 2 */
+    }
+
+    .hobbies img {
+        max-width: 100%;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
+
+/* Tela média (tablets) */
+@media (max-width: 1024px) {
+    .profile-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .profile-pic img {
+        width: 300px;
+    }
+
+    .phrase.larger-text {
+        font-size: 18px;
+    }
+
+    .img-container {
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
+    }
+
+    .hobbies h2 {
+        font-size: 45px;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+}
