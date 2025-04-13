@@ -1,10 +1,10 @@
-/* Estilos gerais */
+/* ESTILOS GERAIS */
 * {
-    margin: 15px;
     padding: 0;
     border-radius: 5px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 10px; /* Mantido conforme seu código original */
 }
 
 body {
@@ -12,6 +12,7 @@ body {
     color: #fff;
 }
 
+/* CABEÇALHO */
 header {
     display: flex;
     justify-content: space-between;
@@ -24,6 +25,7 @@ h1 {
     color: #ffffff;
 }
 
+/* NAVEGAÇÃO */
 nav {
     display: flex;
     align-items: center;
@@ -44,7 +46,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* CONHEÇA-ME */
+/* SEÇÃO CONHEÇA-ME */
 .content h2 {
     font-size: 50px;
     text-align: center;
@@ -55,7 +57,7 @@ nav ul li a {
     color: #8A2BE2;
     font-weight: bold;
     display: block;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .hero {
@@ -77,6 +79,7 @@ nav ul li a {
     height: auto;
     border-radius: 5px;
     margin-left: 120px;
+    transition: transform 0.3s;
 }
 
 .phrase.larger-text {
@@ -96,7 +99,7 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* PÁGINA HOBBIES */
+/* FRASE */
 .phrase {
     font-size: 1.5rem;
     color: #fff;
@@ -106,6 +109,7 @@ nav ul li a {
     margin: 0 auto;
 }
 
+/* PÁGINA HOBBIES */
 .hobbies {
     background-color: #230829;
     color: #fff;
@@ -125,6 +129,11 @@ nav ul li a {
     gap: 5px;
     justify-items: center;
     margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.img-container :hover {
+    transform: scale(1.05); /* Dá movimento às imagens */
 }
 
 .img {
@@ -144,9 +153,9 @@ nav ul li a {
 .conhecimentos {
     background-color: #230829;
     color: #fff;
-    padding: 0px;
+    padding: 0%;
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
     font-size: 18px;
     line-height: 1.6;
 }
@@ -163,6 +172,40 @@ nav ul li a {
     color: rgb(35, 240, 8);
 }
 
+/* PÁGINA PROJETOS */
+.projetos {
+    background-color: #230829;
+    padding: 40px;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 50px;
+    color: #8A2BE2;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.projetos h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: -50px;
+
+}
+
+.img-projetos img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(138, 43, 226, 0.3);
+    transition: transform 0.3s;
+}
+
+
 /* RODAPÉ */
 .footer {
     background-color: #3f1e49;
@@ -171,87 +214,7 @@ nav ul li a {
     padding: 10px 0;
     font-size: 14px;
     font-weight: bold;
-    left: 0;
-    bottom: 0;
+    border-radius: 0;
     width: 100%;
-}
-
-/* Media Queries para Responsividade */
-
-/* Tela pequena (celulares) */
-@media (max-width: 767px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        margin-top: 30px;
-    }
-
-    .profile-pic img {
-        margin-left: 0;
-        width: 250px;
-    }
-
-    .phrase.larger-text {
-        font-size: 16px;
-        margin-right: 0;
-        margin-top: 20px;
-    }
-
-    .hobbies {
-        padding: 30px;
-    }
-
-    .hobbies h2 {
-        font-size: 40px;
-    }
-
-    .img-container {
-        grid-template-columns: 1fr; /* 1 coluna em vez de 2 */
-    }
-
-    .hobbies img {
-        max-width: 100%;
-    }
-
-    .footer {
-        font-size: 12px;
-    }
-}
-
-/* Tela média (tablets) */
-@media (max-width: 1024px) {
-    .profile-container {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .profile-pic img {
-        width: 300px;
-    }
-
-    .phrase.larger-text {
-        font-size: 18px;
-    }
-
-    .img-container {
-        grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
-    }
-
-    .hobbies h2 {
-        font-size: 45px;
-    }
-
-    .footer {
-        font-size: 13px;
-    }
+    margin-bottom: 40px; /* 👈 espaçamento adicionado */
 }

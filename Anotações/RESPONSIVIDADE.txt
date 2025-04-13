@@ -1,0 +1,78 @@
+
+/* Tela pequena (celulares) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .profile-pic img {
+        margin-left: 0;
+        width: 250px;
+    }
+
+    .phrase.larger-text {
+        font-size: 16px;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .hobbies {
+        padding: 30px;
+    }
+
+    .hobbies h2 {
+        font-size: 40px;
+    }
+
+    .img-container {
+        grid-template-columns: 1fr; /* 1 coluna em vez de 2 */
+    }
+
+    .hobbies img {
+        max-width: 100%;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
+
+/* Tela média (tablets) */
+@media (max-width: 1024px) {
+    .profile-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .profile-pic img {
+        width: 300px;
+    }
+
+    .phrase.larger-text {
+        font-size: 18px;
+    }
+
+    .img-container {
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
+    }
+
+    .hobbies h2 {
+        font-size: 45px;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+}
