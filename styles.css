@@ -1,10 +1,11 @@
+
 /* ESTILOS GERAIS */
 * {
     padding: 0;
     border-radius: 5px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 8px;
+    margin: 8px; /* altera grossura do cabeçalho */
 }
 
 body {
@@ -15,7 +16,6 @@ body {
 /* CABEÇALHO */
 header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px 90px;
@@ -34,7 +34,6 @@ nav {
 
 nav ul {
     list-style: none;
-    flex-direction: column;
     display: flex;
 }
 
@@ -135,7 +134,7 @@ nav ul li a {
 }
 
 .img-container :hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Dá movimento às imagens */
 }
 
 .img {
@@ -193,6 +192,7 @@ nav ul li a {
     color: #fff;
     margin-bottom: 30px;
     margin-top: -50px;
+
 }
 
 .img-projetos img {
@@ -206,6 +206,7 @@ nav ul li a {
     transition: transform 0.3s;
 }
 
+
 /* RODAPÉ */
 .footer {
     background-color: #3f1e49;
@@ -216,116 +217,5 @@ nav ul li a {
     font-weight: bold;
     border-radius: 0;
     width: 100%;
-    margin-bottom: 40px;
-}
-
-/* ✅ RESPONSIVIDADE */
-
-/* 📱 Responsivo: celulares e tablets */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .profile-pic img {
-        width: 80%;
-        margin-left: 0;
-    }
-
-    .phrase.larger-text {
-        max-width: 90%;
-        margin: 20px auto 0 auto;
-        font-size: 18px;
-    }
-
-    .img-container {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
-    }
-
-    .img {
-        max-width: 100%;
-    }
-
-    .btn-contato {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-
-    .conhecimentos {
-        padding: 20px;
-        font-size: 16px;
-    }
-
-    .conhecimentos h1 {
-        font-size: 32px;
-    }
-
-    .conhecimentos h3 {
-        font-size: 22px;
-    }
-
-    .projetos h2 {
-        font-size: 32px;
-    }
-
-    .projetos h3 {
-        font-size: 16px;
-        margin-top: 0;
-    }
-
-    .img-projetos img {
-        width: 90%;
-    }
-
-    .hobbies h2 {
-        font-size: 32px;
-    }
-
-    .footer {
-        font-size: 12px;
-        padding: 15px 10px;
-    }
-}
-
-/* 💻 Responsivo: notebooks e telas menores */
-@media (max-width: 1024px) {
-    header {
-        padding: 20px 40px;
-    }
-
-    .phrase.larger-text {
-        margin-right: 0;
-    }
-
-    .profile-pic img {
-        width: 60%;
-        margin-left: 0;
-    }
-
-    .img-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .img {
-        max-width: 90%;
-    }
-
-    .img-projetos img {
-        width: 80%;
-    }
+    margin-bottom: 40px; /* 👈 espaçamento adicionado */
 }
